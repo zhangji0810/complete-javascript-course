@@ -1,7 +1,7 @@
 // Lecture: Values and Variables
 const country = "China";
 const contient = "Aisa";
-let population = 13000000;
+let population = 1400000000;
 
 /* console.log("I come from " + country + ", a country locates in " + contient + ". The population of " +  country + " is " + population + "."); */
 
@@ -51,3 +51,11 @@ let populationFinland = 6000000;
 // } else {
 //     console.log("No borders.");
 // }
+
+// Lecture: Logical Operators
+// if(language === "English" && population < 50000000 && !isIsland) {
+//     console.log(`${country} is the right fit for you!`);
+// } else {
+//     console.log(`${country} does not meet your criteria :(`);
+// }
+

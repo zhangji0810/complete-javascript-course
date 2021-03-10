@@ -84,4 +84,23 @@ if(favourite === 3) {
     console.log("My wife love 7 too!");
 } else {
     console.log("Good luck for you. Hahaha");
-} */
+} 
+
+const hasDriverLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriverLicense && hasGoodVision);
+console.log(hasDriverLicense || hasGoodVision);
+console.log(!hasDriverLicense);
+
+const shouldDrive = hasDriverLicense && hasGoodVision;
+
+if(shouldDrive) {
+    console.log("Sarah is able to drive.");
+} else {
+    console.log("Someone else should drive.");
+}
+
+const isTired = true;
+console.log(); */
+
