@@ -102,5 +102,50 @@ if(shouldDrive) {
 }
 
 const isTired = true;
-console.log(); */
+console.log(); 
 
+const day = prompt('Which day do you want to check?');
+
+switch(day) {
+    case 'monday':
+        console.log('Plan course structure.');
+        break;
+    case  'tuesday':
+        console.log('Prepare theory videos.');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code.');
+        break;
+    case 'friday':
+        console.log('Record videos.');
+        break;
+    case 'saturday':
+        'sunday';
+        console.log('Enjoy the weekend!');
+        break
+    default:
+        console.log('Not a valid day.');
+}
+
+if(day === 'monday') {
+    console.log('Plan course structure.');
+} else if(day === 'tuesday') {
+    console.log('Prepare theory videos.');
+} else if(day === 'wednesday' || day === 'thursday') {
+    console.log('Write code.');
+} else if(day === 'friday') {
+    console.log('Record videos.');
+} else if(day === 'saturday' || day === 'sunday') {
+    console.log('Enjoy the weekend!');
+} else {
+    console.log('Not a valid day.');
+} */
+
+// const age = 23;
+// // age >= 18 ? console.log('I like to drink wine'): console.log("I like to drink water.");
+
+// const drink = age >= 18 ? "Wine": "Water";
+// console.log(drink);
+
+// console.log(`I like to drink ${age >= 18 ? "Wine": "Water"}`);

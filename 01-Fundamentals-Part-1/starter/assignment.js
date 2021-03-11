@@ -59,3 +59,26 @@ let populationFinland = 6000000;
 //     console.log(`${country} does not meet your criteria :(`);
 // }
 
+// Lecture: The switch Statement
+// const yourLanguage = prompt("What's your native language?");
+// switch(yourLanguage) {
+//     case "Chinese":
+//     case "Mandarin":
+//         console.log("MOST number of native speakers!");
+//         break;
+//     case "Spanish":
+//         console.log("2nd place in nubmer of native speakers.");
+//         break;
+//     case "English":
+//         console.log("3rd place in nubmer of native speakers.");
+//         break;
+//     case "Hindi":
+//         console.log("Number 4.");
+//         break;
+//     case "Arabic":
+//         console.log("5th most spoken language.");
+//         break;
+//     default:
+//         console.log("Great language too!");
+// }
+
