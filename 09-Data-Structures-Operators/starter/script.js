@@ -4,6 +4,21 @@
 const flights =
   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
+const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const openingHours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
 // Data needed for first part of the section
 const restaurant = {
   name: "Classico Italiano",
@@ -12,7 +27,9 @@ const restaurant = {
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
 
-  order: function (starterIndex, mainIndex) {
+  openingHours,
+
+  order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.starterMenu[mainIndex]];
   },
 
@@ -37,21 +54,6 @@ const restaurant = {
     console.log(mainIngredients);
     console.log(otherIngredients);
   },
-
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
 };
 
 restaurant.orderDelivery({
@@ -61,18 +63,99 @@ restaurant.orderDelivery({
   starterIndex: 2,
 });
 
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
-console.log(menu);
+const ordersSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risotto",
+  "Pasta",
+  "Pizza",
+]);
 
-for (const item of menu) console.log(item);
+// const question = new Map([
+//   ["question", "What is the best programming language in the world?"],
+//   [1, "C"],
+//   [2, "Java"],
+//   [3, "JavaScript"],
+//   ["correct", 3],
+//   [true, "correct"],
+//   [false, "try again"],
+// ]);
+// console.log(question);
 
-for (const item of menu.entries()) {
-  console.log(item);
-}
+// for (const [key, value] of question) {
+//   if (typeof key === "number") {
+//     console.log(`Answer ${key}: ${value}`);
+//   }
+// }
+// const answer = Number(prompt("Your answer"));
 
-for (const [k, v] of menu.entries()) {
-  console.log(`${k + 1}: ${v}`);
-}
+// console.log(question.get(question.get("correct") === answer));
+
+// const rest = new Map();
+// // rest.set("name", "Classico Italiano");
+// // rest.set(1, "Firenze, Italy");
+// // console.log(rest.set(2, "Lisbon, Portugal"));
+
+// rest
+//   .set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"])
+//   .set("open", 11)
+//   .set("close", 23)
+//   .set(true, "We are open.")
+//   .set(false, "We are closed.");
+// console.log(rest);
+
+// console.log(rest.get("open"));
+
+// console.log(ordersSet);
+
+// console.log(ordersSet.size);
+// console.log(ordersSet.has("Pizza"));
+
+// console.log(weekdays.includes("a"));
+
+// const staff = ["Waiter", "Chef", "Waiter", "Manger", "Chef"];
+// const staffUnique = new Set(staff);
+// console.log(staffUnique);
+
+// const entries = Object.entries(openingHours);
+// console.log(entries);
+
+// const properties = Object.keys(openingHours);
+
+// for (const day of properties) {
+//   console.log(day);
+// }
+
+// console.log(Object.values(openingHours));
+
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours.fri?.open);
+
+// const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+// for (const day of days) {
+//   const open = restaurant.openingHours[day]?.open ?? "close";
+//   console.log(`On ${day}, we open at ${open}`);
+// }
+
+// console.log(restaurant.order?.(0, 1) ?? "Method does not exist.");
+
+// const users = [{ name: "Jonas", email: "you@example.com" }];
+// console.log(users[0]?.name ?? "User array empty.");
+
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+
+// for (const item of menu) console.log(item);
+
+// for (const item of menu.entries()) {
+//   console.log(item);
+// }
+
+// for (const [k, v] of menu.entries()) {
+//   console.log(`${k + 1}: ${v}`);
+// }
 // if (restaurant.orderPizza) {
 //   restaurant.orderPizza("mushrooms", "spinach");
 // }
