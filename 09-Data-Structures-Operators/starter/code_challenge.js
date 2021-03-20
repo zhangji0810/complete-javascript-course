@@ -103,34 +103,51 @@ const game = {
 // }
 // console.log(scorers);
 
-// Coding Challenge #3
-const gameEvents = new Map([
-  [17, "GOAL"],
-  [36, "Substitution"],
-  [47, "GOAL"],
-  [61, "Substitution"],
-  [64, "Yellow Card"],
-  [69, "Red Card"],
-  [70, "Substitution"],
-  [72, "Substitution"],
-  [76, "GOAL"],
-  [80, "GOAL"],
-  [92, "Yellow Card"],
-]);
-// Task 1
-const events = [...new Set(gameEvents.values())];
+// // Coding Challenge #3
+// const gameEvents = new Map([
+//   [17, "GOAL"],
+//   [36, "Substitution"],
+//   [47, "GOAL"],
+//   [61, "Substitution"],
+//   [64, "Yellow Card"],
+//   [69, "Red Card"],
+//   [70, "Substitution"],
+//   [72, "Substitution"],
+//   [76, "GOAL"],
+//   [80, "GOAL"],
+//   [92, "Yellow Card"],
+// ]);
+// // Task 1
+// const events = [...new Set(gameEvents.values())];
 
-// Task 2
-gameEvents.delete(64);
+// // Task 2
+// gameEvents.delete(64);
 
-// Task 3
-console.log(
-  `An event happened, on average, every ${90 / gameEvents.size} minutes`
-);
+// // Task 3
+// console.log(
+//   `An event happened, on average, every ${90 / gameEvents.size} minutes`
+// );
 
-// Task 4
-for (const [time, event] of gameEvents) {
-  console.log(
-    `${time <= 45 ? "[FIRST HALF]" : "[SECOND HALF]"} ${time}: ${event}`
-  );
-}
+// // Task 4
+// for (const [time, event] of gameEvents) {
+//   console.log(
+//     `${time <= 45 ? "[FIRST HALF]" : "[SECOND HALF]"} ${time}: ${event}`
+//   );
+// }
+
+// Challenge #4
+document.body.append(document.createElement("textarea"));
+document.body.append(document.createElement("button"));
+
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  const text = document.querySelector("textarea").value;
+  const texts = text.split("\n");
+  for (let [i, t] of texts.entries()) {
+    t = t.toLowerCase().trim().split("_");
+    t[1] = t[1][0].toUpperCase() + t[1].slice(1);
+    t = t.join("");
+    console.log(`${t.padEnd(20)} ${"H".repeat(i + 1)}`);
+  }
+});
