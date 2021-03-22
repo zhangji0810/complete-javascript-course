@@ -61,15 +61,27 @@ const inputLoanAmount = document.querySelector(".form__input--loan-amount");
 const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
 
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = "";
+
+  movements.forEach(function (mov, i) {
+    const type = mov >= 0 ? "deposit" : "withdrawal";
+
+    const html = `
+        <div class="movements__row">
+          <div class="movements__type movements__type--${type}">${
+      i + 1
+    } ${type}</div>
+          <div class="movements__value">${mov}</div>
+        </div>
+   `;
+    containerMovements.insertAdjacentHTML("afterbegin", html);
+  });
+};
+displayMovements(account1.movements);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
-
-const currencies = new Map([
-  ["USD", "United States dollar"],
-  ["EUR", "Euro"],
-  ["GBP", "Pound sterling"],
-]);
 
 /////////////////////////////////////////////////
 
@@ -92,7 +104,7 @@ const currencies = new Map([
 
 // console.log(letters.join("-"));
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // for (const movement of movements) {
 //   if (movement > 0) {
@@ -102,18 +114,35 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //   }
 // }
 
-movements.forEach((movement) => {
-  if (movement > 0) {
-    console.log(`You deposited ${movement}`);
-  } else {
-    console.log(`You withdraw ${Math.abs(movement)}`);
-  }
-});
+// movements.forEach((movement) => {
+//   if (movement > 0) {
+//     console.log(`You deposited ${movement}`);
+//   } else {
+//     console.log(`You withdraw ${Math.abs(movement)}`);
+//   }
+// });
 
-movements.forEach(function (mov, i, arr) {
-  if (mov > 0) {
-    console.log(`Movement ${i + 1}: You deposited ${mov}`);
-  } else {
-    console.log(`Movement ${i + 1}: You withdraw ${Math.abs(mov)}`);
-  }
-});
+// movements.forEach(function (mov, i, arr) {
+//   if (mov > 0) {
+//     console.log(`Movement ${i + 1}: You deposited ${mov}`);
+//   } else {
+//     console.log(`Movement ${i + 1}: You withdraw ${Math.abs(mov)}`);
+//   }
+// });
+
+// const currencies = new Map([
+//   ["USD", "United States dollar"],
+//   ["EUR", "Euro"],
+//   ["GBP", "Pound sterling"],
+// ]);
+
+// currencies.forEach((value, key, map) => {
+//   console.log(`${key}: ${value}`);
+// });
+
+// const currenciesUnique = new Set(["USD", "GBP", "USD", "EUR", "EUR"]);
+// console.log(currenciesUnique);
+// currenciesUnique.forEach(function (value, key, map) {
+//   console.log(`${key}: ${value}`);
+//   console.log(map);
+// });
