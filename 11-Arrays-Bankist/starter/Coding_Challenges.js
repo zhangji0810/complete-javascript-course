@@ -34,3 +34,51 @@ const dogs = [
   { weight: 13, curFood: 275, owners: ["Sarah", "John"] },
   { weight: 32, curFood: 340, owners: ["Michael"] },
 ];
+
+// Task 1
+dogs.forEach(
+  (dog) => (dog.recommenedFood = Math.trunc(dog.weight ** 0.75 * 28))
+);
+console.log(dogs);
+
+// Task 2
+const dogSarah = dogs.find((dog) => dog.owners.includes("Sarah"));
+console.log(dogSarah);
+console.log(
+  `Sarah's dog is eating too ${
+    dogSarah.curFood > dogSarah.recommenedFood ? "much" : "little"
+  }`
+);
+
+// Task 3
+const ownersEatTooMuch = dogs
+  .filter((dog) => dog.curFood > dog.recommenedFood)
+  .flatMap((dog) => dog.owners);
+
+const ownersEatTooLittle = dogs
+  .filter((dog) => dog.curFood < dog.recommenedFood)
+  .flatMap((dog) => dog.owners);
+
+// Task 4
+
+console.log(`${ownersEatTooMuch.join(" and ")}'s dogs eat too much!`);
+console.log(`${ownersEatTooLittle.join(" and ")}'s dogs eat too little!`);
+
+// Task 5
+console.log(dogs.some((dog) => dog.curFood === dog.recommenedFood));
+
+// Task 6
+const checkEatingOkay = (dog) =>
+  dog.curFood > dog.recommenedFood * 0.9 &&
+  dog.curFood < dog.recommenedFood * 1.1;
+
+console.log(dogs.some(checkEatingOkay));
+
+// Task 7
+console.log(dogs.filter(checkEatingOkay));
+
+// Task 8
+const dogsCopySorted = dogs
+  .slice()
+  .sort((a, b) => a.recommenedFood - b.recommenedFood);
+console.log(dogsCopySorted);
