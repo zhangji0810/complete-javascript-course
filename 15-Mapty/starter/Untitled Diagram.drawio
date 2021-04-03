@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-03T09:21:50.754Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="_ZE1ZHz3S6NPJSQop8mv" version="14.4.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-03T09:25:58.546Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="Igfl7UnLKm9klpahzxkY" version="14.4.8" type="github">
   <diagram id="ZVJCvrJhSOfc0Hs9yVCG" name="Page-1">
     <mxGraphModel dx="786" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -6,31 +6,54 @@
         <mxCell id="1" parent="0" />
         <mxCell id="-EUZ3wJkCfkC2KTh_jhl-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-EUZ3wJkCfkC2KTh_jhl-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="270" y="130" as="targetPoint" />
+            <mxPoint x="160" y="140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-EUZ3wJkCfkC2KTh_jhl-1" value="Page loads" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="120" y="100" width="120" height="60" as="geometry" />
+          <mxGeometry x="10" y="110" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-EUZ3wJkCfkC2KTh_jhl-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-EUZ3wJkCfkC2KTh_jhl-3">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="420" y="130" as="targetPoint" />
+            <mxPoint x="310" y="140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-EUZ3wJkCfkC2KTh_jhl-3" value="Get current location coordinats" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="270" y="100" width="120" height="60" as="geometry" />
+          <mxGeometry x="160" y="110" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-EUZ3wJkCfkC2KTh_jhl-5" value="&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;ASYNC&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="300" y="80" width="60" height="20" as="geometry" />
+          <mxGeometry x="190" y="90" width="60" height="20" as="geometry" />
         </mxCell>
         <mxCell id="-EUZ3wJkCfkC2KTh_jhl-6" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffff88;" vertex="1" parent="1">
-          <mxGeometry x="270" y="70" width="20" height="20" as="geometry" />
+          <mxGeometry x="160" y="80" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-EUZ3wJkCfkC2KTh_jhl-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="-EUZ3wJkCfkC2KTh_jhl-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="140" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="-EUZ3wJkCfkC2KTh_jhl-8" value="Render map on current location" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="420" y="100" width="120" height="60" as="geometry" />
+          <mxGeometry x="310" y="110" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-EUZ3wJkCfkC2KTh_jhl-9" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffff88;" vertex="1" parent="1">
-          <mxGeometry x="420" y="70" width="20" height="20" as="geometry" />
+          <mxGeometry x="310" y="80" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-EUZ3wJkCfkC2KTh_jhl-12" value="Bind &lt;br&gt;handler" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="100" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-EUZ3wJkCfkC2KTh_jhl-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="-EUZ3wJkCfkC2KTh_jhl-13" target="-EUZ3wJkCfkC2KTh_jhl-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-EUZ3wJkCfkC2KTh_jhl-13" value="User clicks on map" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="500" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-EUZ3wJkCfkC2KTh_jhl-14" value="Render workout form" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="650" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-EUZ3wJkCfkC2KTh_jhl-16" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffff88;" vertex="1" parent="1">
+          <mxGeometry x="650" y="80" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-EUZ3wJkCfkC2KTh_jhl-17" value="4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffff88;" vertex="1" parent="1">
+          <mxGeometry x="680" y="80" width="20" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
